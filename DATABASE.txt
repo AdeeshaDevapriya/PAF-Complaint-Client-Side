@@ -1,0 +1,46 @@
+//CREATE
+CREATE TABLE `complaint` (
+  `complain_id` int NOT NULL AUTO_INCREMENT,
+  `name` varchar(45) DEFAULT NULL,
+  `address` varchar(45) DEFAULT NULL,
+  `email` varchar(45) DEFAULT NULL,
+  `contact_no` varchar(12) DEFAULT NULL,
+  `account_no` varchar(10) DEFAULT NULL,
+  `complain` varchar(45) DEFAULT NULL,
+  PRIMARY KEY (`complain_id`)
+) ENGINE=InnoDB AUTO_INCREMENT=23 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+//INSERT
+INSERT INTO `pafcomplain`.`complaint`
+(`complain_id`,
+`name`,
+`address`,
+`email`,
+`contact_no`,
+`account_no`,
+`complain`)
+VALUES
+(<{complain_id: }>,
+<{name: }>,
+<{address: }>,
+<{email: }>,
+<{contact_no: }>,
+<{account_no: }>,
+<{complain: }>);
+
+//UPDATE
+UPDATE `pafcomplain`.`complaint`
+SET
+`complain_id` = <{complain_id: }>,
+`name` = <{name: }>,
+`address` = <{address: }>,
+`email` = <{email: }>,
+`contact_no` = <{contact_no: }>,
+`account_no` = <{account_no: }>,
+`complain` = <{complain: }>
+WHERE `complain_id` = <{expr}>;
+
+
+//DELETE
+DELETE FROM `pafcomplain`.`complaint`
+WHERE <{where_expression}>;
